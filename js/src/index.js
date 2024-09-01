@@ -111,7 +111,9 @@ async function activate(app, menu, browser, launcher) {
               if (isNotebook) {
                 widget.model.fromString(data.content);
               } else {
-                widget.content.editor._editor.setValue(data.content);
+                //widget.content.editor._editor.setValue(data.content);
+                // Set the content of the text editor
+                widget.content.editor.model.fromString(data.content)
               }
             }
           });
